@@ -78,6 +78,13 @@ button[type="submit"]:active {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+
 @media (min-width: 768px) {
     dialog {
         padding: 2rem;

@@ -25,6 +25,11 @@ export class NewTaskComponent {
   }
 
   onSubmit() {
+    if (!this.enteredTitle || !this.enteredSummary || !this.enteredDate) {
+      alert('Please fill in all the fields before creating the task.');
+      return;
+    }
+
     this.tasksService.addTask(
       {
         title: this.enteredTitle,
@@ -33,6 +38,11 @@ export class NewTaskComponent {
       },
       this.userId
     );
+
+    this.enteredTitle = '';
+    this.enteredSummary = '';
+    this.enteredDate = '';
+
     this.close.emit();
   }
 
